@@ -1,0 +1,18 @@
+{
+  "name": "opencode-curator",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "build": "npm run build -w server && npm run build -w web",
+    "build:server": "npm run build -w server",
+    "build:web": "npm run build -w web",
+    "dev:server": "npm run dev -w server",
+    "start": "powershell -ExecutionPolicy Bypass -File scripts/start.ps1",
+    "start:raw": "npm run start -w server",
+    "stop": "powershell -ExecutionPolicy Bypass -File scripts/stop.ps1"
+  }
+}
